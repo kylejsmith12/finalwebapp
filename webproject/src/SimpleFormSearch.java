@@ -53,17 +53,17 @@ public class SimpleFormSearch extends HttpServlet {
          }
          ResultSet rs = preparedStatement.executeQuery();
 
-         while (rs.next()) {
+         while (rs.next() ) {
             int id = rs.getInt("id");
-            String recipename = rs.getString("RecipeName").trim();
-            String listofingredients = rs.getString("listOfIngredients").trim();
-            String preptime = rs.getString("PrepTime").trim();
-            String cookingtime = rs.getString("CookingTime").trim();
-            String listofdirections = rs.getString("ListOfDirections").trim();
-            String listofnutrition = rs.getString("ListOfNutrition").trim();
-            String amountofingredients = rs.getString("AmountOfIngredients").trim();
-            String numberofdifficulty = rs.getString("NumberOfDifficulty").trim();
-            String saverecipe = rs.getString("SaveRecipe").trim();
+            String recipename = handleNull(rs.getString("RecipeName")).trim();
+            String listofingredients = handleNull(rs.getString("listOfIngredients")).trim();
+            String preptime = handleNull(rs.getString("PrepTime")).trim();
+            String cookingtime = handleNull(rs.getString("CookingTime")).trim();
+            String listofdirections = handleNull(rs.getString("ListOfDirections")).trim();
+            String listofnutrition = handleNull( rs.getString("ListOfNutrition")).trim();
+            String amountofingredients = handleNull(rs.getString("AmountOfIngredients")).trim();
+            String numberofdifficulty = handleNull(rs.getString("NumberOfDifficulty")).trim();
+            String saverecipe = handleNull(rs.getString("SaveRecipe")).trim();
 
             if (keyword.isEmpty() || recipename.contains(keyword)) {
                out.println("ID: " + id + ", ");
@@ -102,6 +102,15 @@ public class SimpleFormSearch extends HttpServlet {
       }
    }
 
+   protected String handleNull(String column) {
+	   String retString = column;
+	   if(column == null) {
+		   retString = "Null";
+	   }
+	   
+	   return retString;
+   }
+   
    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
       doGet(request, response);
    }
