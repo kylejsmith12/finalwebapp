@@ -1,0 +1,97 @@
+<html>
+<head>
+<style>
+header {
+    background-color:#D495DB;
+    color:white;
+    text-align:center;
+    padding:5px;	 
+}
+nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:100px;
+    float:left;
+    padding:5px;	      
+}
+section {
+    width:350px;
+    float:left;
+    padding:10px;	 	 
+}
+footer {
+    background-color:#D495DB;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;	 	 
+}
+.thechef a img{
+	float:right
+}
+.thechef{
+
+}
+</style>
+</head>
+
+<body>
+<header>
+<h1> Insert Data </h1>
+</header>
+
+<nav>
+<a href="/webproject/simpleFormSearch.html" >Search Data <p><img src="images/Chef.png" alt="Chef" align="bottom" width="90" height="90"> </p></a> <br>
+</nav>
+
+<section>
+	<h1>User Input</h1>
+	
+	<form action="SimpleFormInsert" method="POST">
+		Recipe Name: <input type="text" name="RecipeName"> <br />
+		List of Ingredients: <input type="text" name="listOfIngredients"> <br />
+		Preparation Time: <input type="text" name="PrepTime"> <br />
+		Cooking Time: <input type="text" name="CookingTime"> <br />
+		List of Directions: <input type="text" name="ListOfDirections"> <br />
+		List of Nutrition: <input type="text" name="ListOfNutrition"> <br />
+		
+		Amount of Ingredients (Small, Medium, or Large): <td>
+                              
+                              <select name="AmountOfIngredients" size="1">
+                              <option value=""></option>
+                              <option value="Small">Small</option>
+                              <option value="Medium">Medium</option>
+                              <option value="Large">Large</option>
+                              </select>
+                              </td><br />
+		Number of Difficulty (From 1 to 10): <td>Difficulty from 1 (easy) to 10 (hard)
+                              1<input type="radio" name="NumberOfDifficulty" value="1"/>
+                              2<input type="radio" name="NumberOfDifficulty" value="2"/>
+                              3<input type="radio" name="NumberOfDifficulty" value="3"/>
+                              4<input type="radio" name="NumberOfDifficulty" value="4"/>
+                              5<input type="radio" name="NumberOfDifficulty" value="5"/>
+                              6<input type="radio" name="NumberOfDifficulty" value="6"/>
+                              7<input type="radio" name="NumberOfDifficulty" value="7"/>
+                              8<input type="radio" name="NumberOfDifficulty" value="8"/>
+                              9<input type="radio" name="NumberOfDifficulty" value="9"/>
+                              10<input type="radio" name="NumberOfDifficulty" value="10"/></td> <br />
+		<td>Save the recipe?
+                              <input type="checkbox" name="SaveRecipe" value="Yes"/>Yes
+                              <input type="checkbox" name="SaveRecipe" value="No"/>No
+                              </td>
+		
+		<input type="submit" value="Submit" />
+	</form>
+
+</section>
+
+<footer>
+
+Copyright
+<button type="button" name="back" onclick="history.back()">Back</button>
+</footer>
+<p><img src="images/smiling-chef-cartoon-character-holding-450w-754199197.jpg" alt="chef2" align="middle" hspace="50" vspace="50"></p>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<html>
+<head>
+<style>
+header {
+    background-color:#D495DB;
+    color:white;
+    text-align:center;
+    padding:5px;	 
+}
+nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:100px;
+    float:left;
+    padding:5px;	      
+}
+section {
+    width:350px;
+    float:left;
+    padding:10px;	 	 
+}
+footer {
+    background-color:#D495DB;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;	 	 
+}
+</style>
+</head>
+
+<body>
+<header>
+<h1> Search Data </h1>
+</header>
+
+<nav>
+<a href="/webproject/simpleFormInsert.html">Insert Data <p><img src="images/Chef.png" alt="Chef" align="bottom" width="90" height="90"> </p></a> <br>
+</nav>
+
+<section>
+	<h1>Recipe Name</h1>
+	
+	<form action="SimpleFormSearch" method="POST">
+	
+		Recipe Name: <input type="text" name="keyword"> <br />
+		
+		<input type="submit" value="Search" />
+	</form>
+
+</section>
+
+<footer>
+Copyright
+<button type="button" name="back" onclick="history.back()">Back</button>
+</footer>
+<p><img src="images/smiling-chef-cartoon-character-holding-450w-754199197.jpg" alt="chef2" align="middle" hspace="50" vspace="50"></p>
+</body>
+</html>

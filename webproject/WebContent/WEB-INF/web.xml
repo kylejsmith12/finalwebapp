@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:jsp="http://java.sun.com/xml/ns/javaee/jsp" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee" version="2.5">
+  <display-name>Jsp_Ex09 - JSP Standard Tag Library</display-name>
+  <servlet>
+    <servlet-name>questions</servlet-name>
+    <jsp-file>/Questions.jsp</jsp-file>
+  </servlet>
+  <servlet>
+    <servlet-name>viewdata</servlet-name>
+    <servlet-class>viewdata</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>questions</servlet-name>
+    <url-pattern>/simplequestions</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>viewdata</servlet-name>
+    <url-pattern>/viewdata</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>simpleFormInsert.html</welcome-file>
+  </welcome-file-list>
+  <jsp-config>
+    <taglib>
+      <taglib-uri>/simplequestions</taglib-uri>
+      <taglib-location>/WEB-INF/tlds/simplefaq.tld</taglib-location>
+    </taglib>
+    <taglib>
+      <taglib-uri>http://java.sun.com/jsp/jstl/core</taglib-uri>
+      <taglib-location>/WEB-INF/tlds/c.tld</taglib-location>
+    </taglib>
+    <taglib>
+      <taglib-uri>http://java.sun.com/jsp/jstl/fmt</taglib-uri>
+      <taglib-location>/WEB-INF/tlds/fmt.tld</taglib-location>
+    </taglib>
+    <jsp-property-group>
+      <url-pattern>*.jsp</url-pattern>
+      <el-ignored>false</el-ignored>
+      <scripting-invalid>false</scripting-invalid>
+    </jsp-property-group>
+  </jsp-config>
+</web-app>
